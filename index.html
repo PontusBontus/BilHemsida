@@ -54,7 +54,7 @@
         }
 
         .slider-container {
-            width: 800px;
+            width: fill;
             height: 400px;
             position: relative;
             overflow: hidden;
@@ -67,7 +67,7 @@
             display: flex;
             width: 300%;
             height: 100%;
-            transition: transform 0.5s ease-in-out;
+            transition: transform 0.7s ease-in-out;
         }
 
         .slide {
@@ -100,7 +100,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.4);
         }
 
         .slider-arrow {
@@ -258,21 +257,24 @@
             
             <div class="slider">
                 <div class="slide">
-                    <img src="/api/placeholder/800/400?text=Luxury+Collection" alt="Luxury Cars">
+                    <video autoplay muted loop style="width:100%; height:auto;">
+                        <source src="On track in the new Porsche 911 GT3 RS.mp4" type="video/mp4">
                     <div class="slide-content">
                         <h2>Premium Selection</h2>
                         <p>Discover our exclusive collection of luxury vehicles</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="/api/placeholder/800/400?text=Expert+Service" alt="Service Center">
+                    <video autoplay muted loop style="width:100%; height:auto;">
+                        <source src="Untitled design.mp4" type="video/mp4">
                     <div class="slide-content">
                         <h2>Expert Service</h2>
                         <p>Professional maintenance and support</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="/api/placeholder/800/400?text=Latest+Models" alt="New Models">
+                    <video autoplay muted loop style="width:100%; height:auto;">
+                        <source src="Untitled design2.mp4" type="video/mp4">
                     <div class="slide-content">
                         <h2>Latest Models</h2>
                         <p>Explore our newest arrivals</p>
@@ -314,7 +316,7 @@
                         <h3>Sports Coupe</h3>
                         <p>High-performance vehicle with sleek design.</p>
                         <p class="car-price">$55,000</p>
-                        <button class="btn">Learn More</button>
+                        <a href="carview1.html"><button class="btn">Learn More</button></a>
                     </div>
                 </div>
             </div>
@@ -375,7 +377,7 @@
             setInterval(function() {
                 currentSlide = (currentSlide + 1) % totalSlides;
                 updateSlide();
-            }, 5000);
+            }, 15000);
         });
     </script>
 </body>
