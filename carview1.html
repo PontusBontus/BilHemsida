@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Details - Premium Motors</title>
     <style>
-        /* Include shared styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
         
         .car-details-container {
             max-width: 1200px;
@@ -92,11 +103,49 @@
         .financing-options {
             margin-top: 2rem;
         }
+        nav {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+    width: auto;
+    height: 50px; }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #4b5563;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <!-- Navigation remains the same -->
+        <div class="nav-container">
+            <a href="index.html"><img src="porsche-3-logo-black-and-white.png" alt="Logo" class="logo"></a>
+            <div class="nav-links">
+                <a href="#inventory">Modeller</a>
+                <a href="#about">Om Porsche</a>
+            </div>
+        </div>
+        
     </nav>
 
     <div class="car-details-container">
