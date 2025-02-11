@@ -8,6 +8,11 @@
     src: url(porsche-next-semibold.otf);
 }
 
+@font-face {
+    font-family: 'porschethin';
+    src: url(porsche-next-thin.otf)
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -61,7 +66,7 @@ nav {
 
 .slider-container {
     width: 100vw; /* Full viewport width */
-    height: 60vh; /* Adjust this value to make the slider shorter (e.g., 60% of viewport height) */
+    height: 60vh; /* Adjust this value to make the slider shorter */
     position: relative;
     overflow: hidden;
     margin: 0; /* Remove margin */
@@ -100,6 +105,27 @@ nav {
     width: 80%;
 }
 
+.slide-content p {
+    font-family: 'porschethin';
+}
+
+.slide-content .offer-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    font-family: 'porschethin';
+}
+
+.slide-content .offer-btn:hover {
+    background-color: #1d4ed8; /* Mörkare blå vid hover */
+}
+
 .slider-arrow {
     position: absolute;
     top: 50%;
@@ -117,6 +143,7 @@ nav {
     font-size: 20px;
     color: #2563eb;
     transition: all 0.3s ease;
+    opacity: 100%;
 }
 
 .slider-arrow:hover {
