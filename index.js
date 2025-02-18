@@ -29,3 +29,20 @@ $(document).ready(function() {
         updateSlide();
     }, 15000);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const promoSections = document.querySelectorAll(".promo-section");
+
+    function fadeInOnScroll() {
+        promoSections.forEach(section => {
+            const sectionPosition = section.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+
+            if (sectionPosition < screenPosition) {
+                section.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+});
