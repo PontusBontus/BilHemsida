@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'porschethin';
-    src: url(porsche-next-thin.otf)
+    src: url(porsche-next-thin.otf);
 }
 
 * {
@@ -21,29 +21,29 @@
 }
 
 body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 .content {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Maxbredd för innehållscontainern */
+    margin: 0 auto; /*Används för att centrera innehållet horisontellt*/
     padding: 20px;
 }
 
 nav {
     background: white;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Skugga under navigationsfältet */
+    position: sticky; /* Gör navigationsmenyn fast när man scrollar */
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Säkerställ att nav är över andra element */
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Sprid ut innehåll i nav */
     align-items: center;
 }
 
@@ -61,16 +61,16 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #2563eb;
+    color: #2563eb; /* Färgändring när man hovrar */
 }
 
 .slider-container {
-    width: 100vw; /* Full viewport width */
-    height: 60vh; /* Adjust this value to make the slider shorter */
+    width: 100vw;
+    height: 60vh;
     position: relative;
     overflow: hidden;
-    margin: 0; /* Remove margin */
-    border-radius: 0; /* Remove border-radius if you want it to cover the full width */
+    margin: 0;
+    border-radius: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -78,11 +78,11 @@ nav {
     display: flex;
     width: 300%;
     height: 100%;
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.7s ease-in-out; /* Animering för bildövergång */
 }
 
 .slide {
-    width: calc(100% / 3);
+    width: calc(100% / 3); /* Används för att varje bild ska ta upp en tredjedel av slidern */
     height: 100%;
     position: relative;
 }
@@ -90,8 +90,8 @@ nav {
 .slide video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire slide without distortion */
-    object-position: center; /* Centers the video within the slide */
+    object-fit: cover;
+    object-position: center; /* Centrerar videon */
 }
 
 .slide-content {
@@ -101,7 +101,7 @@ nav {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    z-index: 1;
+    z-index: 1; /* Säkerställ att texten är över bilden */
     width: 80%;
 }
 
@@ -116,7 +116,7 @@ nav {
     border: none;
     padding: 15px 25px;
     font-size: 15px;
-    border-radius: 20px;
+    border-radius: 20px; /* Rundade hörn på knappen */
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s ease;
@@ -124,34 +124,34 @@ nav {
 }
 
 .slide-content .offer-btn:hover {
-    background-color: #1d4ed8; /* Mörkare blå vid hover */
+    background-color: #1d4ed8;
 }
 
 .slider-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: none; /* Remove background */
-    border: none; /* Remove border */
-    color: white; /* Arrow color */
-    font-size: 35px; /* Increase arrow size */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 35px;
     cursor: pointer;
-    z-index: 2;
-    transition: color 0.3s ease; /* Smooth color transition */
+    z-index: 2; /* Säkerställ att pilarna är över videos */
+    transition: color 0.3s ease; /* Mjuk övergång på 0.3 sekunder */
     opacity: 100%;
 }
 
 .slider-arrow:hover {
-    transform: translateY(-50%) scale(1.1);
-    color: #2563eb;
+    transform: translateY(-50%) scale(1.1); /* Förstora pilen när man hovrar */
+    color: #2563eb; /* Färgändring när man hovrar */
 }
 
 .slider-arrow.prev {
-    left: 20px;
+    left: 20px; /* Positionera vänsterpil */
 }
 
 .slider-arrow.next {
-    right: 20px;
+    right: 20px; /* Positionera högerpil */
 }
 
 .slide-indicators {
@@ -167,45 +167,45 @@ nav {
 .indicator {
     width: 10px;
     height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%; /* Gör indikatorer runda */
+    background: rgba(255, 255, 255, 0.5); /* Genomskinlig bakgrund */
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .indicator.active {
-    background: white;
-    transform: scale(1.2);
+    background: white; /* Färg för aktiv indikator */
+    transform: scale(1.2); /* Förstora aktiv indikator */
 }
 
 .cars-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsiv grid */
+    gap: 2rem; /* Mellanrum mellan kort */
     margin-top: 2rem;
 }
 
 .car-card {
     background: white;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem; /* Rundade hörn på kort */
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Skugga under kort */
+    transition: transform 0.3s, box-shadow 0.3s; /* Mjuk övergång för hover-effekt */
 }
 
 .car-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-5px); /* Lyft kortet vid hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Större skugga vid hover */
 }
 
 .car-image {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* Fyll ut bild utan att förvränga */
 }
 
 .car-details {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Inre utfyllnad för kortets innehåll */
 }
 
 .section-title {
@@ -216,21 +216,21 @@ nav {
 
 .btn {
     padding: 0.75rem 1.5rem;
-    background: #2563eb;
+    background: #2563eb; /* Bakgrundsfärg för knapp */
     color: white;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem; /* Rundade hörn på knapp */
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s; /* Mjuk övergång för färgändring på 0.3 sekunder */
     font-size: 1rem;
 }
 
 .btn:hover {
-    background: #1d4ed8;
+    background: #1d4ed8; /* Mörkare färg vid hover */
 }
 
 footer {
-    background: #1f2937;
+    background: #1f2937; /* Bakgrundsfärg för footer */
     color: white;
     padding: 4rem 1rem;
     margin-top: 4rem;
@@ -240,7 +240,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsiv grid */
     gap: 2rem;
 }
 
@@ -261,44 +261,43 @@ footer {
     max-width: 1200px;
     margin: 40px auto;
     padding: 40px;
-    gap: 4rem;
+    gap: 4rem; /* Mellanrum mellan bild och text */
     margin-left: 150px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    opacity: 0; /* Dölj sektionen som standard */
+    transform: translateY(50px); /* Flytta ned sektionen */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Animering för fade-in */
 }
 
-/* Class added on scroll for fade-in effect */
 .promo-section.show {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Visa sektionen */
+    transform: translateY(0); /* Flytta tillbaka till normal position */
 }
 
-/* Image Styling */
 .promo-image {
-    flex: 1;
+    flex: 1; /*Används för att fylla ut tillgängligt utrymme */
 }
 
 .promo-image2 {
     margin-left: 50px;
 }
+
 .promo-image2 img {
     width: 800px;
-    height: auto; /* Ensures aspect ratio is maintained */
+    height: auto;
 }
 
 .promo-image img {
     width: 100%;
-    max-width: 1200px; /* Adjust this as needed */
-    height: auto; /* Ensures aspect ratio is maintained */
+    max-width: 1200px;
+    height: auto;
 }
 
 .promo-text {
     flex: 1;
 }
 
-.under h2{
-text-align: center;
+.under h2 {
+    text-align: center;
 }
 
 .promo-text h2 {

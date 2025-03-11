@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'porsche';
+    src: url(911porschav3.ttf);
+}
+
+@font-face {
+    font-family: 'porsche2';
+    src: url(porsche-next-semibold.otf);
+}
+
+@font-face {
+    font-family: 'porschethin';
+    src: url(porsche-next-thin.otf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'porsche2';
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: auto;
+    height: 50px;
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #4b5563;
+    transition: color 0.3s;
+    font-family: 'porsche';
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.hero-image {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.hero-image img {
+    width: 60%;
+    height: auto;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-section {
+    padding: 40px 0;
+    background-color: #f7f7f7;
+}
+
+.about-section h1 {
+    font-family: 'porsche';
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.about-section p {
+    font-family: 'porschethin';
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 20px;
+}
